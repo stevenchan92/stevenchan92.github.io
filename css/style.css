@@ -141,7 +141,6 @@ body {
 
 .content-two {
     float: left; 
-    position: relative;
     width: 200px;
     padding: 10px;
 }
