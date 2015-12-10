@@ -49,9 +49,7 @@
 
 </head>
 
-<body>
-
-  <!-- Primary Page Layout
+<!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="top"> </div> 
     
@@ -65,121 +63,17 @@
                 <!--<li> <a href="about.html">About</a> </li> -->
               </ul>
               <hr>
-          </div>
+          	</div>
+        
+        <h2> Hello World </h2>
+        <p> <h3>S</h3>o I finally learned how to HTML & CSS. Wasn't that hard at all. Now I just gotta stop being lazy and keep up with practicing on a regular basis. It's quite interesting to see what made it so hard 
         </div>
-      </div>
-
-     <!--Blog Posts #1 
-    <div class="row">
-      <div class="one-third column"> 
-        <div class="date">
-          <h6> Nov 10, 2015 </h6>
-          <hr>
-        </div>
-      </div>
-      <div class="two-thirds column"> 
-        <div class="postpreview">
-          <!-- <a href="post.html">  
-
-          <a
-          href="./index.html"
-          class="animsition-link"
-          data-animsition-out-class="fade-out-right"
-          data-animsition-out-duration="2000"
-          >
-            <h3> Sample Blog Post </h3>
-            <p class="subtitles"> This is going to be a sample of what my writing is going to be about. I'm going to add another sentence in here just so I know what it would look like if people had to resize.  </p> </a>
-            </div>
-            <hr>
-</a>
-
-          <a
-          href="http://stevenchan.co"
-          class="animsition-link"
-          data-animsition-out-class="rotate-out"
-          data-animsition-out-duration="500"
-          >
-          </a>
-           
-        </div>
-      </div>
-
-<!--Blog Posts #0 
-    <div class="row">
-      <div class="one-third column"> 
-        <div class="date">
-          <h6> Nov 15, 2015 </h6>
-          <hr>
-        </div>
-      </div>
-      <div class="two-thirds column"> 
-        <div class="postpreview">
-          <a href="post.html">
-            <h3> Welcome to my bitchin' new blog </h3>
-            <p class="subtitles"> This is going to be a sample of what my writing is going to be about. I'm going to add another sentence in here just so I know what it would look like if people had to resize.  <p> </a>
-            <hr>
-        </div>
-      </div>
-
-<!--Blog Posts #2 
-    <div class="row">
-      <div class="one-third column"> 
-        <div class="date">
-          <h6> Nov 15, 2015 </h6>
-          <hr>
-        </div>
-      </div>
-      <div class="two-thirds column"> 
-        <div class="postpreview">
-          <a href="post.html">
-            <h3> Welcome to my bitchin' new blog </h3>
-            <p class="subtitles"> This is going to be a sample of what my writing is going to be about. I'm going to add another sentence in here just so I know what it would look like if people had to resize.  <p> </a>
-            <hr>
-        </div>
-      </div>
-
-      <!--Blog Posts #1 
-    <div class="row">
-      <div class="one-third column"> 
-        <div class="date">
-          <h6> Nov 10, 2015 </h6>
-          <hr>
-        </div>
-      </div>
-      <div class="two-thirds column"> 
-        <div class="postpreview">
-          <a href="post.html">
-            <h3> Sample Blog Post </h3>
-            <p class="subtitles"> This is going to be a sample of what my writing is going to be about. I'm going to add another sentence in here just so I know what it would look like if people had to resize.  </p> </a>
-            <hr>
-        </div>
-      </div> -->
-
-      <!--Blog Posts #0 -->
-    <div class="row">
-      <div class="one-third column"> 
-        <div class="date">
-          <h6> Nov 15, 2015 </h6>
-          <hr>
-        </div>
-      </div>
-      <div class="two-thirds column"> 
-        <div class="postpreview">
-          <a href="#">
-            <h3> Hello World </h3>
-            <p class="subtitles">So I finally learned how to HTML & CSS. Wasn't that hard at all. Now I just gotta stop being lazy and..</p> </a>
-            <hr>
-        </div>
-      </div>
-
-
-<!-- Pagination --> 
-<!--<p style="position:center"> BITCH ASS PAGINATION </p> -->
+    </div>
 </div>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
-
+<!--
 <footer>
 <div class="row">
       <div class="bottom"> </div> 
@@ -193,5 +87,5 @@
 
   </div>
 </div>
-</footer>
+</footer> -->
 </html>
