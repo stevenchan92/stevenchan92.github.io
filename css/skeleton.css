@@ -240,7 +240,9 @@ background-image: url(http://www.transparenttextures.com/patterns/subtle-white-f
     color: #fff;
   }
 
-
+#date {
+  text-decoration: italic;
+} 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
