@@ -150,7 +150,7 @@ body {
   height: 10em; /* need to change this height / image dimension based on window size */
 }
 .navbar {
-  padding-top: 2em;
+  padding-top: 1em;
   width: 100%;
   height: auto;
   display: inline;
@@ -370,26 +370,33 @@ label > .label-body {
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-ul li{
+#navhead {
   list-style-type: none; 
   display: inline;
   text-align: center;
-  padding: 5px;}
+  padding: 1em; }
+}
+
+ul li{
+  float:left;
+  padding: 3px;}
+
 ol, ul {
   padding: 0;
   margin: 0; }
-  ul ul,
+
+ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
+
 li {
   margin-bottom: 1rem; } 
 
   ul li a {
-    padding: 15px;
+    text-decoration: underline;
   }
 
 
