@@ -36,7 +36,7 @@
   padding: 0 20px;
   box-sizing: border-box;
   border: 4px;
-  border-color: #fff;  }
+  border-color: #fff;}
 .column,
 .columns {
   width: 100%;
@@ -530,9 +530,11 @@ there.
 @media (min-width: 400px) {
   .container{
     text-align:center;
+    margin-top: 2em;
   }
   .name{
     font-size: 3em;
+    margin-top: 1em;
   }
   .end {
     display:float;
@@ -548,6 +550,7 @@ there.
 @media (min-width: 550px) {
   .container {
     text-align: left;
+    margin-top: 10em;
   }
   .end {
     position: fixed;
@@ -555,12 +558,18 @@ there.
     bottom: 0;
     left: 0;
   }
+  .name{
+    font-size:3em;
+  }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
     .name{
     font-size: 3em;
+  }
+  .container{
+    margin-top:10em;
   }
 }
 
