@@ -300,6 +300,15 @@ there.
   }
 }
 
+@media (min-width: 667px) {
+  #title {
+    font-size: 20px;
+  }
+
+    #about {
+    font-size: 16px;
+  }
+}
 /* Larger than tablet */
 @media (min-width: 850px) {
   #title {
