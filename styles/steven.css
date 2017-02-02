@@ -277,6 +277,7 @@ there.
 @media (min-width: 400px)  {
   #title {
     font-size: 3em;
+    font-family: "CoA";
   }
     #about {
     font-size: 1.5em;
