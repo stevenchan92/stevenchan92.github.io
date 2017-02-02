@@ -276,24 +276,21 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px)  {
   #title {
-    font-size: 1.5em;
-    font-family: "Raleway";
+    font-size: 3em;
   }
+    #about {
+    font-size: 1.5em;
+  }
+}
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
     #title {
-    font-size: 1.5em;
-    font-family: "Raleway";
+    font-size: 3em;
   }
-}
-
-/*iPhone 6 */
-@media (min-width: 667px) {
-    #title {
+    #about {
     font-size: 1.5em;
-    font-family: "Raleway";
   }
 }
 
@@ -302,8 +299,12 @@ there.
     #title {
     font-size: 75px;
     letter-spacing: 3px;
-    font-family: "CoA";
   }
+
+    #about {
+    font-size: 45px;
+  }
+}
 }
 
 /* Larger than desktop */
