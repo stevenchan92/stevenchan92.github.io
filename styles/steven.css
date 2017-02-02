@@ -273,75 +273,24 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 400px)  {
-    #title {
-    font-size: 15px;
-    font-family: "CoA";
-  }
-
-  #about {
-    font-size: 15px;
-    margin-top: -2%;
-  }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
-  #title {
-    font-size: 20px;
-    font-family: "CoA";
-  }
-
-    #about {
-    font-size: 25px;
-  }
-
-  #description {
-    font-size: 100%;
-  }
 }
 
+/*iPhone 6 */
 @media (min-width: 667px) {
-  #title {
-    font-size: 20px;
-  }
-
-    #about {
-    font-size: 16px;
-  }
 }
+
 /* Larger than tablet */
 @media (min-width: 850px) {
-  #title {
-    font-size: 60px;
-  }
-
-    #about {
-    font-size: 22px;
-  }
 }
 
 /* Larger than desktop */
 @media (min-width: 1100px) {
-  #title {
-    font-size: 80px;
-  }
-
-    #about {
-    font-size: 30px;
-  }
-
-  #description {
-    font-size: 130%;
-  }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  #title {
-    font-size: 120px;
-  }
-
-    #about {
-    font-size: 40px;
-  }
 }
