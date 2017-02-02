@@ -276,23 +276,24 @@ there.
 /* Larger than mobile */
 @media (min-width: 400px)  {
   #title {
-    font-size: 30px;
+    font-size: 1.5em;
+    font-family: "Raleway";
   }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
     #title {
-    font-size: 30px;
-    position: center;
+    font-size: 1.5em;
+    font-family: "Raleway";
   }
 }
 
 /*iPhone 6 */
 @media (min-width: 667px) {
     #title {
-    font-size: 30px;
-    position: center;
+    font-size: 1.5em;
+    font-family: "Raleway";
   }
 }
 
@@ -301,6 +302,7 @@ there.
     #title {
     font-size: 75px;
     letter-spacing: 3px;
+    font-family: "CoA";
   }
 }
 
