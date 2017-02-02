@@ -90,6 +90,7 @@ body {
 #title {
   font-size: 100px;
   letter-spacing: 20px;
+  font-family: "CoA";
 }
 
 #about {
@@ -125,16 +126,6 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h4 { font-size: 3.0rem; }
   h5 { font-size: 2.4rem; }
   h6 { font-size: 1.5rem; }
-}
-
-p {
-  font-size:130%;
-  margin-top: 0; 
-}
-
-p#sponsor {
-  font-size:100%;
-  margin-top: 0; 
 }
 
 @font-face {
@@ -285,6 +276,7 @@ there.
     #title {
     font-size: 42px;
     text-align: center;
+    font-family: "CoA";
   }
 
   #about {
@@ -296,12 +288,16 @@ there.
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   #title {
-    font-size: 60px;
+    font-size: 1em;
     font-family: "CoA";
   }
 
     #about {
     font-size: 20px;
+  }
+
+  #description {
+    font-size: 100%;
   }
 }
 
@@ -326,6 +322,9 @@ there.
     font-size: 30px;
   }
 
+  #description {
+    font-size: 130%;
+  }
 }
 
 /* Larger than Desktop HD */
