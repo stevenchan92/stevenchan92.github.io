@@ -296,12 +296,13 @@ there.
 
 /* Larger than tablet */
 @media (min-width: 850px) {
-    #title {
+  #title {
     font-size: 75px;
+    font-family: "CoA";
     letter-spacing: 3px;
   }
 
-    #about {
+  #about {
     font-size: 45px;
   }
 }
