@@ -275,7 +275,8 @@ there.
 /*iphone 6*/
 @media (min-width: 370px)  {
   #title {
-    font-size: 3em;
+    font-size: 2em;
+    letter-spacing: 1px;
     font-family: "CoA";
   }
     #about {
