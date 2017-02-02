@@ -87,6 +87,7 @@ body {
   color: #fff;
 }
 
+
 #title {
   font-size: 100px;
   letter-spacing: 20px;
@@ -105,6 +106,7 @@ body {
   margin-top: 5%;
 }
 
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
@@ -120,7 +122,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 /* Larger than phablet */
 @media (min-width: 550px) {
-  h1 { font-size: 5.0rem; }
+  h1 { font-size: .0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
@@ -130,7 +132,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 @font-face {
   font-family: CoA;
-  src: url(../fonts/ColorsOfAutumn.tff);
+  src: url(../fonts/ColorsOfAutumn.ttf);
 }
 
 /* Links
@@ -273,24 +275,48 @@ there.
 
 /* Larger than mobile */
 @media (min-width: 400px)  {
+  #title {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+    #title {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
 }
 
 /*iPhone 6 */
 @media (min-width: 667px) {
+    #title {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
 }
 
 /* Larger than tablet */
 @media (min-width: 850px) {
+    #title {
+    font-size: 75px;
+    letter-spacing: 3px;
+  }
 }
 
 /* Larger than desktop */
 @media (min-width: 1100px) {
+    #title {
+    font-size: 100px;
+    letter-spacing: 7px;
+  }
 }
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
+    #title {
+    font-size: 120px;
+    letter-spacing: 7px;
+  }
 }
