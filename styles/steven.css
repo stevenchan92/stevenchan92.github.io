@@ -137,6 +137,11 @@ p#sponsor {
   margin-top: 0; 
 }
 
+@font-face {
+  font-family: CoA;
+  src: url(../fonts/ColorsOfAutumn.tff);
+}
+
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
@@ -280,8 +285,6 @@ there.
     #title {
     font-size: 42px;
     text-align: center;
-    font-family: "Raleway";
-    letter-spacing: 5px;
   }
 
   #about {
@@ -294,7 +297,7 @@ there.
 @media (min-width: 550px) {
   #title {
     font-size: 60px;
-    letter-spacing: 15px;
+    font-family: "CoA";
   }
 
     #about {
@@ -306,7 +309,6 @@ there.
 @media (min-width: 850px) {
   #title {
     font-size: 60px;
-    letter-spacing: 15px;
   }
 
     #about {
@@ -318,7 +320,6 @@ there.
 @media (min-width: 1100px) {
   #title {
     font-size: 80px;
-    letter-spacing: 20px;
   }
 
     #about {
@@ -331,7 +332,6 @@ there.
 @media (min-width: 1200px) {
   #title {
     font-size: 120px;
-    letter-spacing: 20px;
   }
 
     #about {
