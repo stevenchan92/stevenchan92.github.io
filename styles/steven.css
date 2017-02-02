@@ -90,8 +90,8 @@ body {
 
 #title {
   font-size: 100px;
-  letter-spacing: 20px;
   font-family: "CoA";
+  text-align: center;
 }
 
 #about {
