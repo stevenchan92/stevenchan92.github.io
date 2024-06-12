@@ -139,7 +139,7 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Fjord One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Elza", "sans-serif", sans-serif;;
   color: #000; 
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! 
 
@@ -160,13 +160,13 @@ background-image: url(http://www.transparenttextures.com/patterns/subtle-white-f
 
 .name {
   font-family: "CoA", "Playfair Display";
-  color: #3CB371;
+  color: #2349c7;
   letter-spacing: 0.1em;
   font-size: 3em;
 }
 
 .subsection {
-  font-family: "Raleway","MNB", "Abril Flatface";
+  font-family: "Gallient", sans-serif;
   letter-spacing: 0.1em;
 }
 
@@ -233,7 +233,7 @@ background-image: url(http://www.transparenttextures.com/patterns/subtle-white-f
 
   .end {
     background-color: #000;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-family: "Elza", "Gallient", "Helvetica Neue",, sans-serif; 
     font-size: 1em;
     height: 10%;
     width: 100%;
@@ -276,6 +276,17 @@ p {
     font-family: MNB; /*a name to be used later*/
     src: url(../fonts/MaisonNeueBold.ttf); /*URL to font*/
 }
+
+@font-face {
+  font-family: Elza;
+  src: url(../fonts/ElzaTextTrial-Medium.otf);
+}
+
+@font-face {
+  font-family: Gallient;
+  src: url(../fonts/Gallient.ttf);
+}
+
 
 /* Links #c0392b
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
