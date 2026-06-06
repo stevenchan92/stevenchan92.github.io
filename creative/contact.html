@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Steven Chan</title>
+  <meta name="description" content="Work with Steven Chan — UGC creator and photographer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&family=DM+Sans:opsz,wght@9..40,300;9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-body">
+
+  <aside class="sidebar">
+    <div class="sidebar-top">
+      <a href="index.html" class="site-name">Steven Chan</a>
+      <span class="site-tagline">Photography</span>
+    </div>
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-section">
+          <span class="nav-label">Work</span>
+          <ul class="nav-sub">
+            <li><a href="index.html">Portraits</a></li>
+            <li><a href="landscapes.html">Landscapes</a></li>
+            <li><a href="interiors.html">Interiors</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://instagram.com/hipsterhikes" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </aside>
+
+  <main class="inner-main inner-main--form">
+    <div class="inner-content inner-content--wide">
+      <h1>Work <em>together</em></h1>
+      <p>Tell me about your brand and what you're building. I'll get back to you within 48 hours.</p>
+
+      <!--
+        SETUP: Replace YOUR_FORM_ID below with your Formspree endpoint.
+        1. Go to formspree.io and create a free account
+        2. Create a new form — set the email to s@stevenchan.co
+        3. Copy the form ID (looks like "xabcdefg") and paste it into the action URL below
+      -->
+      <form
+        action="https://formspree.io/f/mykayeqj"
+        method="POST"
+        class="contact-form"
+        id="contact-form"
+      >
+        <!-- hidden fields -->
+        <input type="hidden" name="_subject" value="New inquiry from stevenchan.co/creative">
+        <input type="text" name="_gotcha" style="display:none"> <!-- honeypot spam trap -->
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="brand">Brand / Company</label>
+            <input type="text" id="brand" name="brand" required placeholder="Your brand">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@brand.com">
+        </div>
+
+        <div class="form-group">
+          <label>Content I need</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="content_type" value="Photos"> Photos
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="content_type" value="Video / Reels"> Video / Reels
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="content_type" value="Story Packs"> Story Packs
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Budget</label>
+          <select id="budget" name="budget">
+            <option value="" disabled selected>Select a range</option>
+            <option value="Under $500">Under $500</option>
+            <option value="$500 – $1,500">$500 – $1,500</option>
+            <option value="$1,500 – $3,000">$1,500 – $3,000</option>
+            <option value="$3,000+">$3,000+</option>
+            <option value="Let's discuss">Let's discuss</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">What are you building?</label>
+          <textarea id="message" name="message" rows="4" required placeholder="Tell me about the campaign, product, or project."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send inquiry &rarr;</button>
+        <p class="form-note" id="form-status"></p>
+      </form>
+
+    </div>
+  </main>
+
+  <script>
+    // Style select when a value is chosen
+    const budget = document.getElementById('budget');
+    budget.addEventListener('change', () => {
+      budget.classList.toggle('has-value', budget.value !== '');
+    });
+
+    // Optional: AJAX submit to stay on page after send
+    // Remove this block if you prefer Formspree's default redirect
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          budget.classList.remove('has-value');
+          status.textContent = 'Message sent — I\'ll be in touch within 48 hours.';
+        } else {
+          status.textContent = 'Something went wrong. Try emailing s@stevenchan.co directly.';
+        }
+      } catch {
+        status.textContent = 'Something went wrong. Try emailing s@stevenchan.co directly.';
+      }
+    });
+  </script>
+
+</body>
+</html>

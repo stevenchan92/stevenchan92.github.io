@@ -1,0 +1,511 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --sidebar-width: 220px;
+  --bg:     #111111;
+  --text:   #f2ede4;
+  --accent: #FFD100;
+  --muted:  #888888;
+  --border: #2e2e2e;
+
+  --font-serif: 'Fraunces', serif;
+  --font-sans:  'DM Sans', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 36px;
+  background: #000;
+  border-right: 1px solid var(--border);
+  z-index: 10;
+}
+
+.site-name {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  line-height: 1.2;
+}
+
+.site-tagline {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.sidebar-nav {
+  margin-top: auto;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+}
+
+/* Top-level spacing (Work section → About → Contact) */
+.sidebar-nav > ul > li + li {
+  margin-top: 28px;
+}
+
+.sidebar-nav a {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  color: var(--accent);
+}
+
+/* Work section label */
+.nav-label {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+/* Portraits / Landscapes / Interiors sub-items */
+.nav-sub {
+  list-style: none;
+  padding-left: 14px;
+}
+
+.nav-sub li + li {
+  margin-top: 14px;
+}
+
+.sidebar-footer {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-footer a {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar-footer a:hover {
+  color: var(--text);
+}
+
+/* ── GALLERY STRIP ── */
+.gallery-strip {
+  margin-left: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 60px 60px 72px;
+  gap: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
+}
+
+.gallery-strip:active {
+  cursor: grabbing;
+}
+
+.gallery-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-item {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  position: relative;
+  /* Prevent iOS long-press "Save to Photos" dialog */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Transparent overlay intercepts right-clicks and drags */
+.img-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.img-wrapper img {
+  /* 154px = strip padding (60px top + 72px bottom) + caption (~22px) */
+  height: calc(100vh - 154px);
+  width: auto;
+  display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.placeholder-img {
+  height: 100%;
+}
+
+.caption {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── INNER PAGES (About, Contact) ── */
+.inner-body {
+  overflow: auto;
+}
+
+.inner-main {
+  margin-left: var(--sidebar-width);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px;
+  overflow-y: auto;
+}
+
+/* Contact page: top-align so the form doesn't float in the middle */
+.inner-main--form {
+  align-items: flex-start;
+  padding-top: 72px;
+}
+
+.inner-content {
+  max-width: 460px;
+  width: 100%;
+}
+
+.inner-content--wide {
+  max-width: 540px;
+}
+
+.inner-content h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-optical-sizing: auto;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.inner-content h1 em {
+  font-style: italic;
+}
+
+.inner-content p {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.inner-content a {
+  color: var(--text);
+  text-underline-offset: 3px;
+}
+
+.inner-content a:hover {
+  color: var(--muted);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.contact-links a {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--text);
+}
+
+/* ── CONTACT FORM ── */
+.contact-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group > label {
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  font-family: var(--font-sans);
+  font-size: 1rem; /* 16px min prevents iOS auto-zoom on focus */
+  font-weight: 300;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  outline: none;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s ease;
+  border-radius: 0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--text);
+}
+
+.form-group textarea {
+  resize: none;
+  line-height: 1.7;
+}
+
+.form-group select {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.form-group select.has-value {
+  color: var(--text);
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 6px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--text);
+  cursor: pointer;
+  /* Larger touch target */
+  padding: 6px 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--text);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.btn-submit {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #000;
+  border: 1px solid var(--accent);
+  padding: 16px 32px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  align-self: flex-start;
+  margin-top: 4px;
+  min-height: 44px;
+}
+
+.btn-submit:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.form-note {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: -8px;
+  min-height: 1.2em; /* reserves space so layout doesn't jump */
+}
+
+/* ── MOBILE ── */
+@media (max-width: 800px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  /* Both gallery and inner pages scroll vertically on mobile */
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  /* Sidebar → fixed top nav bar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    background: #000;
+  }
+
+  .site-tagline   { display: none; }
+  .sidebar-footer { display: none; }
+  .sidebar-nav    { margin-top: 0; overflow-x: auto; scrollbar-width: none; }
+  .sidebar-nav::-webkit-scrollbar { display: none; }
+
+  /* Flatten nested Work sub-nav into a single horizontal row */
+  .sidebar-nav > ul      { display: flex; gap: 0; }
+  .nav-section           { display: contents; }
+  .nav-label             { display: none; }
+  .nav-sub               { display: contents; padding-left: 0; }
+
+  /* All items: no vertical margin, tap-friendly padding */
+  .sidebar-nav li        { margin-top: 0 !important; }
+  .sidebar-nav a         { display: block; padding: 10px 10px; font-size: 0.62rem; }
+
+  /* Gallery → vertical column, body scrolls */
+  .gallery-strip {
+    margin-left: 0;
+    margin-top: var(--nav-height);
+    height: auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: 0;
+    gap: 0;
+    cursor: default;
+  }
+
+  .gallery-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .img-wrapper {
+    height: 85vh;      /* fallback */
+    height: 85svh;     /* shrinks with browser UI visible — avoids content jumping */
+  }
+
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Override the inline widths set on placeholder divs */
+  .placeholder-img {
+    width: 100% !important;
+  }
+
+  .caption {
+    padding: 12px 20px 20px;
+    white-space: normal;
+  }
+
+  /* Inner pages */
+  .inner-main {
+    margin-left: 0;
+    min-height: auto;
+    padding: 40px 24px 64px;
+    padding-top: calc(var(--nav-height) + 40px);
+  }
+
+  .inner-main--form {
+    padding-top: calc(var(--nav-height) + 32px);
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-submit {
+    width: 100%;
+    text-align: center;
+  }
+}
